@@ -1,0 +1,56 @@
+--------------- On RHEL/CentOS 7 ---------------
+# yum localinstall mysql80-community-release-el7-1.noarch.rpm
+
+
+rpm –ivh mysql57-community-release-el7-11.noarch.rpm
+
+sudo yum install -y mysql-server
+
+sudo grep 'temporary password' /var/log/mysqld.log
+
+to make passwordpolicy low-
+need to open below file and 
+
+vim /etc/my.cnf
+update below cmmand 
+
+
+validate_password_policy=LOW
+
+sudo mysql_secure_installation
+
+start ysql
+mysql -u root -p
+mysql port 3306
+
+
+
+
+
+http://35.229.97.126:3306/sys
+
+SHOW GLOBAL VARIABLES LIKE 'PORT';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+temporary password generated:  ;j*2.KJsiel<
+;j*2.KJsiel<
+;j*2.KJsiel<
